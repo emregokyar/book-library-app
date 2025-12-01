@@ -1,4 +1,4 @@
-export const MovieServices = () => {
+export const BookServices = () => {
   return (
     <>
       <div

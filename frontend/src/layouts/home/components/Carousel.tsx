@@ -1,16 +1,13 @@
-import inter from "../../../assets/movie/peak.jpg";
-import { FeaturedMovie } from "./FeaturedMovie";
+import _1984 from "../../../assets/books/1984.jpg";
+import { FeaturedMovie } from "./FeaturedBook";
 
 export const Carousel = () => {
   return (
     <>
-      <div
-        className="container mt-5 mb-5"
-        style={{ height: 550, color: "grey" }}
-      >
+      <div className=" mt-5 mb-5" style={{ height: 550, color: "grey" }}>
         <div className="homepage-carousel-title pt-3">
           <h2 className="text-center fw-bold">
-            Top Picks for Your Perfect Movie Night
+            Top Picks for Your Next Great Read
           </h2>
         </div>
         <div
@@ -23,17 +20,23 @@ export const Carousel = () => {
             <div className="carousel-item justify-content-center">
               <div className="row d-flex justify-content-center align-items-center">
                 <FeaturedMovie />
+                <FeaturedMovie />
+                <FeaturedMovie />
               </div>
             </div>
 
             <div className="carousel-item active justify-content-center">
               <div className="row d-flex justify-content-center align-items-center">
                 <FeaturedMovie />
+                <FeaturedMovie />
+                <FeaturedMovie />
               </div>
             </div>
 
             <div className="carousel-item justify-content-center">
               <div className="row d-flex justify-content-center align-items-center">
+                <FeaturedMovie />
+                <FeaturedMovie />
                 <FeaturedMovie />
               </div>
             </div>
@@ -48,8 +51,8 @@ export const Carousel = () => {
             <span aria-hidden="false">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="60"
-                height="60"
+                width="40"
+                height="40"
                 fill="grey"
                 className="bi bi-chevron-left"
                 viewBox="0 0 16 16"
@@ -71,8 +74,8 @@ export const Carousel = () => {
             <span aria-hidden="false">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="60"
-                height="60"
+                width="40"
+                height="40"
                 fill="grey"
                 className="bi bi-chevron-right"
                 viewBox="0 0 16 16"
@@ -91,8 +94,8 @@ export const Carousel = () => {
           <div className="row d-flex justify-content-center align-item-center">
             <div className="text-center">
               <img
-                className="rounded-3"
-                src={inter}
+                className="rounded-3 border"
+                src={_1984}
                 alt="Movie Poster"
                 style={{
                   width: "20rem",
@@ -101,9 +104,9 @@ export const Carousel = () => {
                 }}
               />
               <h6 className="mt-2">
-                <b>Intersellar</b>
+                <b>1984</b>
               </h6>
-              <p>Starring Matthew McConaughey</p>
+              <p>By George Orwell</p>
               <a
                 href=""
                 className="btn rounded-0 border-bottom"

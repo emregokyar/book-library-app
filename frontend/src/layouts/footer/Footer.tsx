@@ -6,7 +6,7 @@ export const Footer = () => {
         style={{ color: "grey" }}
       >
         <p className="col-md-4 mb-0">
-          @ {new Date().getFullYear()} Movie App, Inc
+          @ {new Date().getFullYear()} Book Library App, Inc
         </p>
         <ul className="nav navbar-dark col-md-4 justify-content-end">
           <li className="nav-item">

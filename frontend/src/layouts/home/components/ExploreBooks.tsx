@@ -1,4 +1,4 @@
-export const ExploreMovies = () => {
+export const ExploreBooks = () => {
   return (
     <>
       <div className="p-5 mb-4 bg-dark header">
@@ -10,7 +10,7 @@ export const ExploreMovies = () => {
             <p className="mt-md-4 fs-4" style={{ color: "grey" }}>
               Dive into worlds filled with heroes, mysteries, and unforgettable
               stories. Whether you're chasing excitement, emotion, or pure
-              escapism — your next cinematic journey starts here.
+              escapism — your next journey starts here.
             </p>
           </div>
           <div className="col-md-2 mt-md-5">

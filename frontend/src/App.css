@@ -22,17 +22,13 @@ body {
   height: 100%;
 }
 
-.main-color {
-  background-color: #303030;
-}
-
 .col-image-left {
-  background-image: url("/src/assets/public/corn.jpg");
+  background-image: url("/src/assets/public/people.jpg");
   height: 25em !important;
 }
 
 .col-image-right {
-  background-image: url("/src/assets/public/movies.jpg");
+  background-image: url("/src/assets/public/carry.jpg");
   height: 25em !important;
 }
 

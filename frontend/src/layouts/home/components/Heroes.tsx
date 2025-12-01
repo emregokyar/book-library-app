@@ -10,12 +10,12 @@ export const Heroes = () => {
 
             <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
               <div className="ml-2">
-                <h1>Share Your Recent Watchlist</h1>
+                <h1>What've you been reading lately?</h1>
                 <p className="lead">
-                  We’re excited to hear what’s been on your screen lately.
-                  Whether you’re exploring new interests or deepening your
-                  knowledge, we’ll help you discover content that fits your
-                  journey perfectly.
+                  We're excited to hear what's been on your reading list lately.
+                  Whether you're exploring new genres or diving deeper into your
+                  favorite topics, we'll help you discover books that perfectly
+                  match your journey.
                 </p>
                 <a
                   className="btn btn-lg border-bottom rounded-0"
@@ -32,11 +32,11 @@ export const Heroes = () => {
               <div className="ml-2">
                 <h1>Our Library Never Stops Growing!</h1>
                 <p className="lead">
-                  Check in often — our collection is constantly evolving! We
-                  work tirelessly to bring you the most accurate and updated
-                  movie selection possible. We’re dedicated to curating
-                  high-quality films, and providing great content will always
-                  remain our top priority.
+                  Check in often — our collection is constantly growing! We work
+                  tirelessly to bring you the most accurate and up-to-date
+                  selection of books. We're dedicated to curating high-quality
+                  titles, and offering a rich reading experience will always be
+                  our top priority.
                 </p>
               </div>
             </div>
