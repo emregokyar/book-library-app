@@ -27,7 +27,7 @@ public class BookService {
     @Transactional(readOnly = true)
     public BookListResponse getBooksBySearch(String title, Integer currentPageNumber, Integer booksPerPage, String category) {
         Optional<List<Book>> searchedBooks;
-        
+        // Depends on the request send a list
         if (category == null || category.isEmpty()) {
             searchedBooks = bookRepository.searchBooksByTitle(("%" + title + "%"));
         } else {

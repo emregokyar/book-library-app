@@ -1,16 +1,32 @@
+import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Footer } from "./layouts/footer/Footer";
 import { Navbar } from "./layouts/header/Navbar";
-//import { HomePage } from "./layouts/home/HomePage";
+import { HomePage } from "./layouts/home/HomePage";
 import { SearchBooksPage } from "./layouts/search/SearchBookPage";
 
 export const App = () => {
   return (
     <>
-      <Navbar />
-      {/* <HomePage /> */}
-      <SearchBooksPage />
-      <Footer />
+      <div className="d-flex flex-column min-vh-100">
+        <Navbar />
+
+        <div className="flex-grow-1">
+          <Switch>
+            <Route path="/" exact>
+              <Redirect to="/home" />
+            </Route>
+            <Route exact path="/home">
+              <HomePage />
+            </Route>
+            <Route path="/search">
+              <SearchBooksPage />
+            </Route>
+          </Switch>
+        </div>
+
+        <Footer />
+      </div>
     </>
   );
 };

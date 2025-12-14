@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const ExploreBooks = () => {
   return (
     <>
@@ -14,7 +16,11 @@ export const ExploreBooks = () => {
             </p>
           </div>
           <div className="col-md-2 mt-md-5">
-            <a href="" type="button" className="btn btn-lg text-white">
+            <Link
+              type="button"
+              className="btn btn-lg text-white"
+              to={"/search"}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
@@ -25,7 +31,7 @@ export const ExploreBooks = () => {
               >
                 <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { FeaturedBook } from "./FeaturedBook";
 import { useEffect, useState } from "react";
 import { BookModel } from "../../../models/BookModel";
 import { SpinnerLoading } from "../../utils/SpinnerLoading";
+import { Link } from "react-router-dom";
 
 export const Carousel = () => {
   const [books, setBooks] = useState<BookModel[]>([]);
@@ -150,8 +151,8 @@ export const Carousel = () => {
         </div>
 
         <div className="homepage-coursel-title d-flex justify-content-center">
-          <a
-            href=""
+          <Link
+            to={"/search"}
             className="btn btn-lg d-flex flex-column justify-content-center align-items-center"
           >
             <svg
@@ -164,7 +165,7 @@ export const Carousel = () => {
             >
               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </>

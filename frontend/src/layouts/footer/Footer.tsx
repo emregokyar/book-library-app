@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Footer = () => {
   return (
     <>
@@ -10,14 +12,22 @@ export const Footer = () => {
         </p>
         <ul className="nav navbar-dark col-md-4 justify-content-end">
           <li className="nav-item">
-            <a href="" className="nav-link px-2" style={{ color: "grey" }}>
+            <Link
+              to={"/home"}
+              className="nav-link px-2"
+              style={{ color: "grey" }}
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="" className="nav-link px-2" style={{ color: "grey" }}>
+            <Link
+              to={"/search"}
+              className="nav-link px-2"
+              style={{ color: "grey" }}
+            >
               Search
-            </a>
+            </Link>
           </li>
         </ul>
       </footer>
