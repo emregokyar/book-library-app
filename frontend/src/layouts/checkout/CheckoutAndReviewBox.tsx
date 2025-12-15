@@ -14,8 +14,8 @@ export const CheckoutAndReviewBox: React.FC<{
         }
       >
         <div className="card-body container">
-          <div className="mt-3">
-            <p>
+          <div className="mt-3 ">
+            <p className="d-flex justify-content-center">
               <b>0/5 </b>
               boooks checked out.
             </p>
@@ -23,7 +23,9 @@ export const CheckoutAndReviewBox: React.FC<{
             {props.book &&
             props.book.copiesAvailable &&
             props.book.copiesAvailable > 0 ? (
-              <h4 className="text-secondary">Available</h4>
+              <h4 className="text-secondary d-flex justify-content-center">
+                Available
+              </h4>
             ) : (
               <h4 className="text-danger">Wait List</h4>
             )}
@@ -41,14 +43,16 @@ export const CheckoutAndReviewBox: React.FC<{
             </div>
           </div>
 
-          <Link to={""} className="btn btn-dark">
+          <Link to={""} className="btn btn-dark d-flex justify-content-center">
             Sign in
           </Link>
           <hr style={{ borderColor: "gray" }} />
-          <p className="mt-3">
+          <p className="mt-3 d-flex justify-content-center">
             This number can be changed until order has been complete.
           </p>
-          <p>Sing in to leave a review.</p>
+          <p className="d-flex justify-content-center">
+            Sing in to leave a review.
+          </p>
         </div>
       </div>
     </>
