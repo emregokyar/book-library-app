@@ -1,6 +1,38 @@
+import { useAuth0 } from "@auth0/auth0-react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { SpinnerLoading } from "../utils/SpinnerLoading";
 
 export const Navbar = () => {
+  const [roles, setRoles] = useState<string[] | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const { isAuthenticated, loginWithRedirect, logout, getIdTokenClaims } =
+    useAuth0();
+
+  useEffect(() => {
+    const fetchRoles = async () => {
+      const claims = await getIdTokenClaims();
+      const fetchedRoles = claims?.["https://library-app/roles"] || [];
+      setRoles(fetchedRoles);
+      setIsLoading(false);
+    };
+
+    fetchRoles();
+  }, [isAuthenticated, getIdTokenClaims]);
+
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
+
+  const handleLogout = () => {
+    logout({ logoutParams: { returnTo: window.location.origin } });
+  };
+
+  const handleLogin = () => {
+    loginWithRedirect();
+    window.location.assign("/");
+  };
+
   return (
     <nav className="navbar navbar-expand-lg main-color navbar-dark py-3">
       <div className="container-fluid container">
@@ -41,16 +73,33 @@ export const Navbar = () => {
             </li>
           </ul>
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item m-1">
-              <a
-                className="btn btn-outline w-100"
-                href=""
-                type="button"
-                style={{ color: "grey", outlineColor: "grey" }}
-              >
-                Sign in
-              </a>
-            </li>
+            {!isAuthenticated ? (
+              <>
+                <li className="nav-item m-1">
+                  <button
+                    className="btn btn-outline w-100"
+                    type="button"
+                    style={{ color: "grey", outlineColor: "grey" }}
+                    onClick={handleLogin}
+                  >
+                    Sign in
+                  </button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="nav-item m-1">
+                  <button
+                    className="btn btn-outline w-100"
+                    type="button"
+                    style={{ color: "grey", outlineColor: "grey" }}
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>
